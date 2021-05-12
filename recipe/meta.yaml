@@ -1,4 +1,4 @@
-{% set version = '0.4.0' %}
+{% set version = "0.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/philentropy_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/philentropy/philentropy_{{ version }}.tar.gz
-  sha256: bfd30bf5635aab6a82716299a87d44cf96c7ab7f4ee069843869bcc85c357127
+  sha256: b39e9a825458f3377e23b2a133180566780e89019e9d22a6a5b7ca87c49c412f
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -50,16 +50,11 @@ test:
 about:
   home: https://github.com/HajkD/philentropy
   license: GPL-2.0-only
-  summary: Computes 46 optimized distance and similarity measures for comparing probability functions
-    (Drost (2018) <doi:10.21105/joss.00765>). These comparisons between probability
-    functions have their foundations in a broad range of scientific disciplines from
-    mathematics to ecology. The aim of this package is to provide a core framework for
-    clustering, classification, statistical inference, goodness-of-fit, non-parametric
-    statistics, information theory, and machine learning tasks that are based on comparing
-    univariate or multivariate probability functions.
+  summary: Computes 46 optimized distance and similarity measures for comparing probability functions (Drost (2018) <doi:10.21105/joss.00765>). These comparisons between probability functions have their foundations in a broad range of scientific disciplines from mathematics to ecology. The aim of this package is to provide
+    a core framework for clustering, classification, statistical inference, goodness-of-fit, non-parametric statistics, information theory, and machine learning tasks that are based on comparing univariate or multivariate probability functions.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
