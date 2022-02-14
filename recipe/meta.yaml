@@ -1,4 +1,4 @@
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/philentropy_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/philentropy/philentropy_{{ version }}.tar.gz
-  sha256: b39e9a825458f3377e23b2a133180566780e89019e9d22a6a5b7ca87c49c412f
+  sha256: 138acf2aedab17c9d367def378e35c8aba80d9e786284b2866955cea1c24eeb6
 
 build:
   merge_build_host: true  # [win]
