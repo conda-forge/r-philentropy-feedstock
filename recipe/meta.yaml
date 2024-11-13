@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/philentropy_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/philentropy/philentropy_{{ version }}.tar.gz
-  sha256: 3aa6d4918168f4fe2c56ea3f26381b0ffc02f1d5b9b95e294bac1a34bf66be3e
+  sha256: 40db5a0f68bb48711605597df63d778732f967ba94621262e77bd448b5833513
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
