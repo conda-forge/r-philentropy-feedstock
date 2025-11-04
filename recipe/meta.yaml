@@ -16,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -35,11 +39,13 @@ requirements:
     - r-base
     - r-kernsmooth
     - r-rcpp
+    - r-rcppparallel
     - r-poorman
   run:
     - r-base
     - r-kernsmooth
     - r-rcpp
+    - r-rcppparallel
     - r-poorman
 
 test:
