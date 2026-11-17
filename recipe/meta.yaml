@@ -1,4 +1,4 @@
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/philentropy_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/philentropy/philentropy_{{ version }}.tar.gz
-  sha256: 2edc53f7f077d3379f73e7d1e8cd1472135da95ddfc47c8273ae96b1da538a49
+  sha256: 9d69d95382e3c060de8f5b1bc4453637a1e9d4ac8379e82344256d9ebccfa6ff
 
 build:
   number: 0
@@ -56,8 +56,8 @@ test:
 about:
   home: https://github.com/HajkD/philentropy
   license: GPL-2.0-only
-  summary: Computes 46 optimized distance and similarity measures for comparing probability functions (Drost (2018) <doi:10.21105/joss.00765>). These comparisons between probability functions have their foundations in a broad range of scientific disciplines from mathematics to ecology. The aim of this package is to provide
-    a core framework for clustering, classification, statistical inference, goodness-of-fit, non-parametric statistics, information theory, and machine learning tasks that are based on comparing univariate or multivariate probability functions.
+  summary: Computes 46 optimized distance and similarity measures for comparing probability functions (Drost (2018) <doi:10.21105/joss.00765>). These comparisons between probability functions have their foundations in a broad range of scientific disciplines from mathematics to ecology. The aim of this package is to 
+    provide a core framework for clustering, classification, statistical inference, goodness-of-fit, non-parametric statistics, information theory, and machine learning tasks that are based on comparing univariate or multivariate probability functions.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
